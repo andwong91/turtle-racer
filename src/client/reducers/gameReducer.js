@@ -15,6 +15,8 @@ const initialState = {
   currChar: '',
   // next character to be typed by the user
   nextChar: '',
+  // remaining characters in the current word being typed by the user
+  remainingChars: '',
   // remaining words in the passage
   remainingWords: '',
 };
@@ -42,6 +44,8 @@ const gameReducer = (state = initialState, action) => {
     case types.SEND_AND_UPDATE_CURR_CHAR:
       // emit to socket and update state
     case types.SEND_AND_UPDATE_NEXT_CHAR:
+      // emit to socket and update state
+    case types.SEND_AND_UPDATE_REMAINING_CHARS:
       // emit to socket and update state
     case types.SEND_AND_UPDATE_REMAINING_WORDS:
       // emit to socket and update state

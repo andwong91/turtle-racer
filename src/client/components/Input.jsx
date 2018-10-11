@@ -4,7 +4,7 @@ const Input = (props) => {
   return (
     <div>
       <form>
-        <input type="text" value={props.userInput} onChange={props.sendAndUpdateInputToServer()}/>
+        <input id="input" type="text" value={props.userInput} onChange={props.sendAndUpdateInputToServer()}/>
       </form>
     </div>
   );

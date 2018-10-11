@@ -23,6 +23,10 @@ describe('loginReducer.js', () => {
     resetState();
   });
 
+  test('should export a function', () => {
+    expect(typeof loginReducer).toEqual('function');
+  });
+
   test('the state should not change when a type is not defined', () => {
     const expectedState = loginReducer(initialState, {});
     expect(expectedState.isLoggedIn).toStrictEqual(initialState.isLoggedIn);

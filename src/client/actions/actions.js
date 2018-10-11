@@ -42,17 +42,22 @@ export const sendAndUpdateInvalidInput = (str) => ({
   payload: str
 });
 
-export const sendAndUpdateCurrChars = (str) => ({
-  type: types.SEND_AND_UPDATE_CURR_CHARS,
+export const sendAndUpdateCurrChar = (str) => ({
+  type: types.SEND_AND_UPDATE_CURR_CHAR,
   payload: str
 });
 
-export const sendAndUpdateNextChars = (str) => ({
-  type: types.SEND_AND_UPDATE_NEXT_CHARS,
+export const sendAndUpdateNextChar = (str) => ({
+  type: types.SEND_AND_UPDATE_NEXT_CHAR,
   payload: str
 });
 
-export const senAndUpdateRemainingWords = (str) => ({
+export const sendAndUpdateRemainingChars = (str) => ({
+  type: types.SEND_AND_UPDATE_REMAINING_CHARS,
+  payload: str
+});
+
+export const sendAndUpdateRemainingWords = (str) => ({
   type: types.SEND_AND_UPDATE_REMAINING_WORDS,
   payload: str
 });
