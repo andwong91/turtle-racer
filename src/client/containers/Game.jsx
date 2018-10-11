@@ -13,6 +13,7 @@ const mapStateToProps = store => ({
   invalidInput: store.invalidInput,
   currChar: store.currChar,
   nextChar: store.nextChar,
+  remainingChars: store.remainingChars,
   remainingWords: store.remainingWords,
 });
 
@@ -25,16 +26,13 @@ const mapDispatchToProps = dispatch => ({
   sendAndUpdateInvalidInput: (str) => dispatch(actions.sendAndUpdateInvalidInput(str)),
   sendAndUpdateCurrChar: (str) => dispatch(actions.sendAndUpdateCurrChar(str)),
   sendAndUpdateNextChar: (str) => dispatch(actions.sendAndUpdateNextChar(str)),
+  sendAndUpdateRemainingChars: (str) => dispatch(actions.sendAndUpdateRemainingChars(str)),
   sendAndUpdateRemainingWords: (str) => dispatch(actions.sendAndUpdateRemainingWords(str)),
 });
 
 export class Game extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    // get a random prompt from the database through websocket.
   }
 
   render() {
@@ -52,6 +50,7 @@ export class Game extends Component {
           sendAndUpdateInvalidInput={this.props.sendAndUpdateInvalidInput}
           sendAndUpdateCurrChar={this.props.sendAndUpdateCurrChar}
           sendAndUpdateNextChar={this.props.sendAndUpdateNextChar}
+          sendAndUpdateRemainingChars={this.props.sendAndUpdateRemainingChars}
           sendAndUpdateRemainingWords={this.props.sendAndUpdateRemainingWords}
         />
         <Input 
