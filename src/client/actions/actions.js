@@ -22,7 +22,12 @@ export const getUserInput = (str) => ({
   payload: str
 });
 
-export const sendAndUpdateInputToServer = (str) => ({
+export const updateAndValidateInput = (str) => ({
+  type: types.UPDATE_AND_VALIDATE_INPUT,
+  payload: str
+});
+
+export const sendInputToServer = (str) => ({
   type: types.SEND_AND_UPDATE_INPUT_TO_SERVER,
   payload: str
 });

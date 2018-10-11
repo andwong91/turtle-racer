@@ -20,7 +20,8 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch => ({
   addPrompt: (str) => dispatch(actions.addPrompt(str)),
   getUserInput: () => dispatch(actions.getUserInput()),
-  sendAndUpdateInputToServer: (str) => dispatch(actions.sendAndUpdateInputToServer(str)),
+  updateAndValidateInput: (str) => dispatch(actions.updateAndValidateInput(str)),
+  sendInputToServer: (str) => dispatch(actions.sendInputToServer(str)),
   sendAndUpdateValidWords: (str) => dispatch(actions.sendAndUpdateValidWords(str)),
   sendAndUpdateValidInput: (str) => dispatch(actions.sendAndUpdateValidInput(str)),
   sendAndUpdateInvalidInput: (str) => dispatch(actions.sendAndUpdateInvalidInput(str)),
@@ -45,7 +46,8 @@ export class Game extends Component {
           invalidInput={this.props.invalidInput}
           currChar={this.props.currChar}
           nextChar={this.props.nextChar}
-          sendAndUpdateValidWords={this.props.sendAndUpdateValidWords}
+          remainingChars={this.props.remainingChars}
+          remainingWords={this.props.remainingWords}
           sendAndUpdateValidInput={this.props.sendAndUpdateValidInput}
           sendAndUpdateInvalidInput={this.props.sendAndUpdateInvalidInput}
           sendAndUpdateCurrChar={this.props.sendAndUpdateCurrChar}

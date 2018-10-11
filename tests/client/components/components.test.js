@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from '../../enzyme';
 
 import Prompt from '../../../src/client/components/Prompt';
-import Input from '../../../src/client/components/Input';
+// import Input from '../../../src/client/components/Input';
 import ValidWords from '../../../src/client/components/ValidWords';
 import ValidInput from '../../../src/client/components/ValidInput';
 import CurrChar from '../../../src/client/components/CurrChar';
@@ -21,16 +21,6 @@ describe('component tests', () => {
 
     test('should return a div', () => {
       expect(wrapper.find('div')).toHaveLength(1);
-    });
-  });
-
-  describe('<Input/>', () => {
-    beforeAll(() => {
-      wrapper = shallow(<Input sendAndUpdateInputToServer={() => {}}/>);
-    });
-
-    test('should have an input tag', () => {
-      expect(wrapper.find('input')).toHaveLength(1);
     });
   });
 

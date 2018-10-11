@@ -38,15 +38,6 @@ describe('actions', () => {
     expect(actions.getUserInput(str)).toEqual(expectedAction);
   });
 
-  it('should create an action to send and update input to server', () => {
-    const str = '';
-    const expectedAction = {
-      type: types.SEND_AND_UPDATE_INPUT_TO_SERVER,
-      payload: str
-    };
-    expect(actions.sendAndUpdateInputToServer(str)).toEqual(expectedAction);
-  });
-
   it('should create an action to send and update valid words', () => {
     const str = '';
     const expectedAction = {

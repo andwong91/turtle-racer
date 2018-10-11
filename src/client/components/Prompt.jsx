@@ -5,6 +5,7 @@ import ValidWords from './ValidWords';
 import InvalidInput from './InvalidInput';
 import CurrChar from './CurrChar';
 import NextChar from './NextChar';
+import RemainingChars from './RemainingChars';
 import RemainingWords from './RemainingWords';
 
 const Prompt = (props) => {
@@ -29,6 +30,10 @@ const Prompt = (props) => {
       <InvalidInput
         invalidInput={props.invalidInput}
         sendAndUpdateInvalidInput={props.sendAndUpdateInvalidInput}
+      />
+      <RemainingChars
+        remainingChars={props.remainingChars}
+        sendAndUpdateRemainingChars={props.sendAndUpdateRemainingChars}
       />
       <RemainingWords 
         remainingWords={props.remainingWords}
